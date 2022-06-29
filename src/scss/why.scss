@@ -1,0 +1,113 @@
+.why {
+    background: #F8F8FA;
+    padding: 95px 0 155px 0;
+    @media (max-width:$md2 + px) {
+        padding: 75px 0;
+    }
+    @media (max-width:$md3 + px) {
+        padding: 60px 0 50px;
+    }
+    @media (max-width:$md4 + px) {
+        padding: 50px 0 40px;
+    }
+    &__content {
+        @media (min-width:$md2 + px) {
+            display: grid;
+            grid-template: 
+            [start] 'image title' 19% [row2]
+            [row2] 'image body' 81% [row-end] / 53.2% 43.8%;
+            column-gap: 100px;
+            row-gap: 50px;
+            justify-items: center;
+            align-items: center;
+        }
+        @media (max-width: 1500px) {
+            column-gap: 70px;
+        }
+        @media (max-width: 13700px) {
+            column-gap: 60px;
+        }
+        @media (max-width:1200px) {
+            column-gap: 40px;
+        }
+    }
+    &__title {
+        grid-area: title;
+        text-align: center;
+        justify-self: start;
+        align-self: end;
+        @media (max-width:$md2 + px) {
+            margin: 0 0 50px 0;
+        }
+        @media (max-width:$md3 + px) {
+            margin: 0 0 40px 0;
+        }
+        @media (max-width:$md4 + px) {
+            margin: 0 0 32px 0;
+        }
+    }
+    &__image {
+        grid-area: image;
+        align-self: start;
+        overflow: hidden;
+        img {
+            max-width: 100%;
+        }
+        @media (max-width:$md2 + px) {
+            margin: 0 0 40px 0;
+            width: 110%;
+            img {
+                margin: 0 0 0 -16px;
+            }
+        }
+        @media (max-width:$md3 + px) {
+            overflow: visible;
+            margin: 0 0 30px 0;
+        }
+        @media (max-width:$md4 + px) {
+            margin: 0 0 24px 0;
+        }
+    }
+    &__body {
+        grid-area: body;
+        align-self: start;
+    }
+    &__items {
+    }
+    &__item {
+        margin: 0 0 48px 0;
+        &:last-child {
+            margin: 0;
+        }
+        @media (max-width:$md2 + px) {
+            margin: 0 0 40px 0;
+        }
+        @media (max-width:$md3 + px) {
+            margin: 0 0 30px 0;
+        }
+        @media (max-width:$md4 + px) {
+            margin: 0 0 24px 0;
+        }
+    }
+    &__subtitle {
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 42 / 28 * 100%;
+        margin: 0 0 8px 0;
+        @media (max-width:1340px) {
+            font-size: 24px;
+            margin: 0 0 5px 0;
+        }
+        @media (max-width:1144px) {
+            font-size: 20px;
+            margin: 0 0 3px 0;
+        }
+        @media (max-width:$md2 + px) {
+            @include adaptiv-font(20, 18);
+            margin: 0 0 16px 0;
+        }
+    }
+    &__text {
+        @include adaptiv-font(18, 14);
+    }
+}

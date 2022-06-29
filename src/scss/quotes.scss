@@ -1,0 +1,83 @@
+.quotes {
+    &__content {
+        padding: 110px 80px 150px;
+        display: flex;
+        justify-content: space-between;
+        @media (max-width:$md2 + px) {
+            padding: 80px 40px 130px;
+            flex-direction: column;
+            align-items: center;
+        }
+        @media (max-width:$md2 + px) {
+            padding: 80px 40px 130px;
+        }
+        @media (max-width:$md4 + px) {
+            padding: 50px 16px 70px;
+        }
+    }
+    &__body {
+    }
+    &__info {
+        flex: 0 1 48.5%;
+        align-self: center;
+        @media (max-width:$md2 + px) {
+            margin: 0 0 60px 0;
+        }
+        @media (max-width:$md3 + px) {
+            margin: 0 0 50px 0;
+        }
+        @media (max-width:$md4 + px) {
+            margin: 0 0 40px 0;
+        }
+    }
+    &__subtitle {
+        margin: 0 0 24px 0;
+        @include adaptiv-font(36, 20);
+        @media (max-width:$md3 + px) {
+            text-align: center;
+        }
+        @media (max-width:$md4 + px) {
+            margin: 0 0 16px 0;
+        }
+    }
+    &__rating {
+        .rating__body {
+            margin: 0
+        }
+        .rating__value {
+            @include adaptiv-font(24, 14W);
+            line-height: 32 / 24 * 100%;
+            margin: 5px 0 0 0;
+            @media (max-width:$md2 + px) {
+                margin: 3px 0 0 0;
+                line-height: 21 / 14 * 100%;
+            }
+        }
+    }
+    
+    &__slider {
+        flex: 1 1 51.5%;
+        @media (max-width:$md2 + px) {
+            max-width: 100%;
+        }
+    }   
+    &__slide {
+        @include adaptiv-font(24, 14);
+        line-height: 46 / 24 * 100%;
+        text-align: center;
+        align-self: center;
+        padding: 40px 50px;
+        background: #FFFFFF;
+        border-radius: 2px;
+        @media (max-width:1340px) {
+            padding: 30px;
+        }
+        @media (max-width:1130px) {
+            padding: 15px;
+        }
+        @media (max-width:$md2 + px) {
+            padding: 36px 24px;
+        }
+    } 
+}
+
