@@ -25,14 +25,22 @@ body {
     width: 100%;
     min-height: 100%;
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
+    grid-template: minmax(100px, auto) 1fr minmax(70px, auto) / 1fr;
+    grid-template-areas: 
+        'header'
+        'main'
+        'footer';
     &._loaded {
     }
 }
-
+.header {
+    grid-area: header;
+}
 main {
-    flex: 1 1 auto;
+    grid-area: main;
+}
+.footer {
+    grid-area: footer;
 }
 
 //Основная сетка================================================
